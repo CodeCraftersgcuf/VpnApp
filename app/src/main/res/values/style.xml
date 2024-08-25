@@ -1,0 +1,12 @@
+<resources>
+    <style name="CustomTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+
+        <item name="android:textColor">#B3B3B3</item> <!-- Light grey text color -->
+    </style>
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">@null</item>
+    </style>
+
+</resources>

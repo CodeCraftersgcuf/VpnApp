@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Define a custom style for menu items -->
+    <style name="CustomMenuItemStyle" parent="TextAppearance.AppCompat">
+        <!-- Customize text color -->
+        <item name="android:textColor">#FF0000</item> <!-- Example color: Red -->
+        <!-- Customize text size -->
+
+        <item name="android:textSize">18sp</item>
+        <!-- You can add more attributes here as needed -->
+    </style>
+</resources>
