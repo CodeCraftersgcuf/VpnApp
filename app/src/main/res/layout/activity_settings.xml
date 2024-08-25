@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:background="#000000">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_arrow"
+        android:contentDescription="Back Button"
+        app:tint="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Title -->
+
+    <!-- Connection Mode Section -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Settings"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toEndOf="@id/backButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/connectionModeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connection Mode"
+        android:textColor="#B5AEBE"
+        android:textSize="16sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/connectionModeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bottom_border"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/connectionModeLabel"
+        app:layout_constraintStart_toStartOf="parent" >
+
+
+    <RadioButton
+            android:id="@+id/openVpnOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OpenVPN"
+            android:textColor="#FFFFFF"
+            android:layoutDirection="rtl"
+            android:gravity="start"
+     />
+
+        <RadioButton
+            android:id="@+id/ipsecOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IPSec"
+            android:textColor="#FFFFFF"
+            android:layoutDirection="rtl"
+            android:gravity="start"
+/>
+
+        <RadioButton
+            android:id="@+id/issrOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ISSR"
+            android:textColor="#FFFFFF"
+            android:layoutDirection="rtl"
+            android:gravity="start"
+/>
+    </RadioGroup>
+
+
+    <!-- Kill Switch Section -->
+    <TextView
+        android:id="@+id/killSwitchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kill Switch"
+        android:textColor="#B5AEBE"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+
+        app:layout_constraintTop_toBottomOf="@id/connectionModeGroup"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/killSwitchToggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="18dp"
+        android:text="Block Internet When Connecting Or\nChanging Servers"
+        android:textColor="#FFFFFF"
+        android:paddingBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bottom_border"
+        app:layout_constraintTop_toBottomOf="@id/killSwitchLabel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Connection Section -->
+    <TextView
+        android:id="@+id/connectionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connection"
+        android:textColor="#B5AEBE"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/killSwitchToggle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/connectWhenStartsToggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text="Connect when Prime VPN starts"
+        android:textColor="#FFFFFF"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/connectionLabel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/connectionDurationBoostLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connection duration boost"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:paddingBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bottom_border"
+        app:layout_constraintTop_toBottomOf="@id/connectWhenStartsToggle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Notification Section -->
+    <TextView
+        android:id="@+id/notificationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notification"
+        android:textColor="#B5AEBE"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/connectionDurationBoostLabel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/showNotificationToggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text="Show notification when Prime VPN is\n not connected"
+        android:textColor="#FFFFFF"
+        android:paddingBottom="20dp"
+        android:background="@drawable/bottom_border"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/notificationLabel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Dark Theme Section -->
+    <TextView
+        android:id="@+id/darkThemeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dark Theme"
+        android:textColor="#B5AEBE"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/showNotificationToggle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/darkThemeToggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text="Reduce glare and improve night viewing"
+        android:textColor="#FFFFFF"
+        android:paddingBottom="20dp"
+        android:background="@drawable/bottom_border"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/darkThemeLabel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

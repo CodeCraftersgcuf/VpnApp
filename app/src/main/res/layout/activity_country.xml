@@ -9,19 +9,30 @@
     android:background="#0D1321"
     tools:context=".Country">
 
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintEnd_toStartOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/white_arrow" />
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:text="Choose Location"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"/>
-
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/searchLocation"
@@ -30,30 +41,31 @@
         android:hint="Search location"
         android:textColor="#FFFFFF"
         android:textColorHint="#BCB9B9"
-    android:padding="12dp"
-    android:drawableStart="@android:drawable/ic_menu_search"
-    android:background="@drawable/edittext_border"
-    android:layout_marginTop="8dp"
-    android:layout_marginStart="16dp"
-    android:layout_marginEnd="16dp"
-    app:layout_constraintTop_toBottomOf="@id/title"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"/>
-
+        android:padding="12dp"
+        android:paddingStart="20dp"
+        android:drawableEnd="@android:drawable/ic_menu_search"
+        android:background="@drawable/edittext_border"
+        android:gravity="start|center_vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#232026"/>
 
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@id/searchLocation"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/searchLocation">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,391 +73,417 @@
             android:orientation="vertical">
 
             <!-- Repeat this block for each country -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bottom_border"
+                    android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/flagIcon1"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/us"/>
+                    android:src="@drawable/us" />
 
                 <TextView
                     android:id="@+id/countryName1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:text="United States"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/dropdownIcon1"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/dropdown"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/dropdown" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_border"
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/flagIcon2"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/france"/>
+                    android:src="@drawable/france" />
 
                 <TextView
                     android:id="@+id/countryName2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:text="France"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/dropdownIcon2"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/dropdown"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/dropdown" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_border"
+
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/flagIcon3"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/uk"/>
+                    android:src="@drawable/uk" />
 
                 <TextView
                     android:id="@+id/countryName3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:text="United Kindom"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/dropdownIcon3"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/dropdown"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/dropdown" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_border"
+
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/flagIcon4"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/canada"/>
+                    android:src="@drawable/canada" />
 
                 <TextView
                     android:id="@+id/countryName4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:text="Canada"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/dropdownIcon4"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/dropdown"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/dropdown" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_border"
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/flagIcon5"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/flag"/>
+                    android:src="@drawable/flag" />
 
                 <TextView
                     android:id="@+id/countryName5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:text="Germany"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/dropdownIcon5"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/dropdown"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/dropdown" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_border"
+
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/flagIcon7"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/sw"/>
+                    android:src="@drawable/sw" />
 
                 <TextView
                     android:id="@+id/countryName7"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:text="Switzerland"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/dropdownIcon7"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/dropdown"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/dropdown" />
             </LinearLayout>
             <!-- Add more similar blocks for other countries -->
             <!-- Repeated for about 20 items -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_border"
+
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/flagIcon121"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/netherlands"/>
+                    android:src="@drawable/netherlands" />
 
                 <TextView
                     android:id="@+id/countryName121"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:text="Netherlands"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/dropdownIcon121"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/dropdown"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/dropdown" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_border"
+
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/flagIcon122"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/australia"/>
+                    android:src="@drawable/australia" />
 
                 <TextView
                     android:id="@+id/countryName122"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:text="Australia"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/dropdownIcon122"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/dropdown"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/dropdown" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_border"
+
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/flagIcon123"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/sweden"/>
+                    android:src="@drawable/sweden" />
 
                 <TextView
                     android:id="@+id/countryName123"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:text="Sweden"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/dropdownIcon123"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/dropdown"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/dropdown" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_border"
+
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/flagIcon124"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/norway"/>
+                    android:src="@drawable/norway" />
 
                 <TextView
                     android:id="@+id/countryName124"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:text="Norway"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/dropdownIcon124"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/dropdown"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/dropdown" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_border"
+
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/flagIcon1242"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/japan"/>
+                    android:src="@drawable/japan" />
 
                 <TextView
                     android:id="@+id/countryName1242"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:text="Japan"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/dropdownIcon1242"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/dropdown"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/dropdown" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_border"
+
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/flagIcon125"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/singapore"/>
+                    android:src="@drawable/singapore" />
 
                 <TextView
                     android:id="@+id/countryName125"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:text="Singapore"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/dropdownIcon125"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/dropdown"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/dropdown" />
             </LinearLayout>
-
 
 
         </LinearLayout>
 
 
     </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
