@@ -53,6 +53,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
 
     // Corrected these dependencies to use string literals instead of version catalog notation
     implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Outer Ring -->
+    <item>
+        <shape android:shape="ring">
+            <solid android:color="#0D1321"/>
+            <size android:width="300dp" android:height="300dp"/>
+        </shape>
+    </item>
+
+    <!-- Gradient Arc (to indicate speed) -->
+    <item>
+        <rotate
+            android:fromDegrees="135"
+            android:toDegrees="135"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="ring">
+                <size android:width="280dp" android:height="280dp"/>
+                <gradient
+                    android:startColor="#22CCC2"
+                    android:endColor="#23A29B"
+                    android:angle="0"/>
+            </shape>
+        </rotate>
+    </item>
+
+    <!-- Inner Circle -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#131829"/>
+            <size android:width="200dp" android:height="200dp"/>
+        </shape>
+    </item>
+</layer-list>
