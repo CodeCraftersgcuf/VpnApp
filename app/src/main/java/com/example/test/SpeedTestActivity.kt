@@ -9,12 +9,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.coroutines.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody
 import java.io.IOException
-import kotlin.concurrent.thread
 import kotlin.system.measureTimeMillis
 
 class SpeedTestActivity : AppCompatActivity() {
@@ -25,6 +25,8 @@ class SpeedTestActivity : AppCompatActivity() {
     private lateinit var pingValue: TextView
     private lateinit var startSpeedTestButton: Button
     private lateinit var speedText: TextView
+    private lateinit var downloadRate: TextView
+    private lateinit var uploadRate: TextView
     private lateinit var backButton: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +40,8 @@ class SpeedTestActivity : AppCompatActivity() {
         pingValue = findViewById(R.id.pingValue)
         startSpeedTestButton = findViewById(R.id.startSpeedTestButton)
         speedText = findViewById(R.id.speedText)
+        downloadRate = findViewById(R.id.downloadRate)
+        uploadRate = findViewById(R.id.uploadRate)
         backButton = findViewById(R.id.backButton)
 
         // Start speed test on button click
@@ -59,61 +63,64 @@ class SpeedTestActivity : AppCompatActivity() {
     }
 
     private fun startSpeedTest() {
-        thread {
-            try {
-                val client = OkHttpClient.Builder()
-                    .callTimeout(10, java.util.concurrent.TimeUnit.SECONDS) // Set timeout limit
-                    .build()
+        CoroutineScope(Dispatchers.Main).launch {
+            val client = OkHttpClient.Builder()
+                .callTimeout(10, java.util.concurrent.TimeUnit.SECONDS) // Set timeout limit
+                .build()
 
-                // Ping Test
-                runOnUiThread { pingValue.text = "Measuring Ping..." }
-                val pingTime = measurePing(client, "https://jsonplaceholder.typicode.com/posts/1")
-                runOnUiThread { pingValue.text = String.format("Ping: %d ms", pingTime) }
+            // Ping Test
+            pingValue.text = "Measuring Ping..."
+            val pingTime = measurePing(client, "https://jsonplaceholder.typicode.com/posts/1")
+            pingValue.text = String.format("Ping: %d ms", pingTime)
 
-                // Download Speed Test
-                runOnUiThread { downloadSpeed.text = "Measuring Download Speed..." }
-                val downloadSpeedMbps = measureDownloadSpeed(client)
-                runOnUiThread {
-                    downloadSpeed.text = String.format("Download: %.2f Mbps", downloadSpeedMbps)
-                    animateSpeedText(downloadSpeedMbps)
-                }
+            // Download Speed Test
+            downloadSpeed.text = "Measuring Download Speed..."
+            val downloadSpeeds = mutableListOf<Double>()
+            withContext(Dispatchers.IO) {
+                measureDownloadSpeed(client, downloadSpeeds)
+            }
 
-                // Upload Speed Test
-                runOnUiThread { uploadSpeed.text = "Measuring Upload Speed..." }
-                val uploadSpeedMbps = measureUploadSpeed(client)
-                runOnUiThread {
-                    uploadSpeed.text = String.format("Upload: %.2f Mbps", uploadSpeedMbps)
-                    animateSpeedText(uploadSpeedMbps)
-                }
+            // Calculate and display average download speed
+            val avgDownloadSpeed = downloadSpeeds.average()
+            downloadSpeed.text = String.format("Download: %.2f Mbps", avgDownloadSpeed)
+            downloadRate.text = String.format("Download Rate: %.2f Mbps", avgDownloadSpeed)
 
-            } catch (e: Exception) {
-                Log.e("SpeedTestActivity", "Error during speed test", e)
-                runOnUiThread {
-                    Toast.makeText(this, "Failed to perform speed test. Please try again later.", Toast.LENGTH_SHORT).show()
-                    downloadSpeed.text = "Download: N/A"
-                    uploadSpeed.text = "Upload: N/A"
-                    pingValue.text = "Ping: N/A"
+            // Upload Speed Test
+            uploadSpeed.text = "Measuring Upload Speed..."
+            val uploadSpeeds = mutableListOf<Double>()
+            withContext(Dispatchers.IO) {
+                measureUploadSpeed(client, uploadSpeeds)
+            }
+
+            // Calculate and display average upload speed
+            val avgUploadSpeed = uploadSpeeds.average()
+            uploadSpeed.text = String.format("Upload: %.2f Mbps", avgUploadSpeed)
+            uploadRate.text = String.format("Upload Rate: %.2f Mbps", avgUploadSpeed)
+
+            // Display the average speed after tests
+            val overallAvgSpeed = (avgDownloadSpeed + avgUploadSpeed) / 2
+            speedText.text = String.format("Avg Speed: %.2f Mbps", overallAvgSpeed)
+        }
+    }
+
+    private suspend fun measurePing(client: OkHttpClient, url: String): Long {
+        return withContext(Dispatchers.IO) {
+            measureTimeMillis {
+                try {
+                    val request = Request.Builder().url(url).build()
+                    client.newCall(request).execute().use { response ->
+                        if (!response.isSuccessful) throw IOException("Ping failed: ${response.message}")
+                    }
+                } catch (e: Exception) {
+                    Log.e("SpeedTestActivity", "Error during ping", e)
                 }
             }
         }
     }
 
-    private fun measurePing(client: OkHttpClient, url: String): Long {
-        return measureTimeMillis {
-            try {
-                val request = Request.Builder().url(url).build()
-                client.newCall(request).execute().use { response ->
-                    if (!response.isSuccessful) throw IOException("Ping failed: ${response.message}")
-                }
-            } catch (e: Exception) {
-                Log.e("SpeedTestActivity", "Error during ping", e)
-            }
-        }
-    }
-
-    private fun measureDownloadSpeed(client: OkHttpClient): Double {
-        val downloadUrl = "https://jsonplaceholder.typicode.com/posts/1" // Simple API endpoint for download test
-        var totalDownloadTime: Long = 0
+    private suspend fun measureDownloadSpeed(client: OkHttpClient, downloadSpeeds: MutableList<Double>) {
+        val downloadUrl = "https://jsonplaceholder.typicode.com/posts/1"
+        val totalDataSizeInKB = 1024.0 // Adjust to reflect actual data size in KB
 
         repeat(10) { index ->
             var success = false
@@ -122,12 +129,16 @@ class SpeedTestActivity : AppCompatActivity() {
                     val downloadTime = measureTimeMillis {
                         client.newCall(Request.Builder().url(downloadUrl).build()).execute().use { response ->
                             if (!response.isSuccessful) throw IOException("Failed to download file: ${response.message}")
-                            response.body?.string() // Fetch the content as string
+                            response.body?.string() // Assuming the response is valid
                         }
                     }
-                    totalDownloadTime += downloadTime
                     success = true
-                    Log.i("SpeedTestActivity", "Download $index completed in $downloadTime ms")
+                    val downloadSpeedMbps = (totalDataSizeInKB / (downloadTime / 1000.0)) / 1024 // Convert to Mbps
+                    downloadSpeeds.add(downloadSpeedMbps)
+                    runOnUiThread {
+                        downloadRate.text = String.format("Download Rate: %.2f Mbps", downloadSpeedMbps)
+                    }
+                    Log.i("SpeedTestActivity", "Download $index completed in $downloadTime ms at speed: ${downloadSpeedMbps}Mbps")
                     return@repeat
                 } catch (e: IOException) {
                     Log.e("SpeedTestActivity", "Retrying download $index... (${attempt + 1}/3)", e)
@@ -137,16 +148,11 @@ class SpeedTestActivity : AppCompatActivity() {
                 Log.e("SpeedTestActivity", "Failed to download $index after 3 attempts")
             }
         }
-
-        // Assume each response is around 1KB (adjust as necessary based on actual response size)
-        val totalDataSizeInKB = 10 * 1.0 // 10 requests, each 1KB
-        val downloadSpeedKbps = totalDataSizeInKB / (totalDownloadTime / 1000.0) // Speed in Kbps
-        return downloadSpeedKbps / 1024 // Convert to Mbps
     }
 
-    private fun measureUploadSpeed(client: OkHttpClient): Double {
+    private suspend fun measureUploadSpeed(client: OkHttpClient, uploadSpeeds: MutableList<Double>) {
         val uploadUrl = "https://jsonplaceholder.typicode.com/posts"
-        var totalUploadTime: Long = 0
+        val totalDataSizeInKB = 512.0 // Adjust to reflect actual data size in KB
 
         repeat(10) { index ->
             val uploadData = """{"title": "foo", "body": "bar", "userId": $index}"""
@@ -160,9 +166,13 @@ class SpeedTestActivity : AppCompatActivity() {
                             if (!response.isSuccessful) throw IOException("Failed to upload file: ${response.message}")
                         }
                     }
-                    totalUploadTime += uploadTime
                     success = true
-                    Log.i("SpeedTestActivity", "Upload $index completed in $uploadTime ms")
+                    val uploadSpeedMbps = (totalDataSizeInKB / (uploadTime / 1000.0)) / 1024 // Convert to Mbps
+                    uploadSpeeds.add(uploadSpeedMbps)
+                    runOnUiThread {
+                        uploadRate.text = String.format("Upload Rate: %.2f Mbps", uploadSpeedMbps)
+                    }
+                    Log.i("SpeedTestActivity", "Upload $index completed in $uploadTime ms at speed: ${uploadSpeedMbps}Mbps")
                     return@repeat
                 } catch (e: IOException) {
                     Log.e("SpeedTestActivity", "Retrying upload $index... (${attempt + 1}/3)", e)
@@ -172,11 +182,6 @@ class SpeedTestActivity : AppCompatActivity() {
                 Log.e("SpeedTestActivity", "Failed to upload $index after 3 attempts")
             }
         }
-
-        // Assume each upload is around 0.5KB (adjust as necessary based on actual request size)
-        val totalDataSizeInKB = 10 * 0.5 // 10 requests, each 0.5KB
-        val uploadSpeedKbps = totalDataSizeInKB / (totalUploadTime / 1000.0) // Speed in Kbps
-        return uploadSpeedKbps / 1024 // Convert to Mbps
     }
 
     private fun animateSpeedText(targetSpeed: Double) {
@@ -191,7 +196,7 @@ class SpeedTestActivity : AppCompatActivity() {
     }
 
     private fun fetchIPAddress() {
-        thread {
+        CoroutineScope(Dispatchers.IO).launch {
             val client = OkHttpClient()
             val request = Request.Builder()
                 .url("https://api.ipify.org?format=text")
@@ -201,14 +206,14 @@ class SpeedTestActivity : AppCompatActivity() {
                 client.newCall(request).execute().use { response ->
                     if (!response.isSuccessful) throw IOException("Unexpected code $response")
                     val ip = response.body?.string()
-                    runOnUiThread {
+                    withContext(Dispatchers.Main) {
                         ipAddress.text = "IP Address: $ip"
                     }
                 }
             } catch (e: Exception) {
                 Log.e("SpeedTestActivity", "Failed to fetch IP address", e)
-                runOnUiThread {
-                    Toast.makeText(this, "Failed to fetch IP address", Toast.LENGTH_SHORT).show()
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@SpeedTestActivity, "Failed to fetch IP address", Toast.LENGTH_SHORT).show()
                     ipAddress.text = "IP Address: N/A"
                 }
             }
