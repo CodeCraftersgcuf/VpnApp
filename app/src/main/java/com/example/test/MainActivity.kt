@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import com.google.android.material.navigation.NavigationView
@@ -16,6 +15,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.test.databinding.ActivityMainBinding
+import com.example.yourapp.LocationActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -57,6 +57,13 @@ class MainActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.nav_speed_test -> {
                     val intent = Intent(this, SpeedTestActivity::class.java)
+                    startActivity(intent)
+                    drawerLayout.closeDrawers()
+                    true
+                }
+                R.id.nav_current_location -> {
+                    // Open the LocationActivity when "Current Location" is clicked
+                    val intent = Intent(this, LocationActivity::class.java)
                     startActivity(intent)
                     drawerLayout.closeDrawers()
                     true
