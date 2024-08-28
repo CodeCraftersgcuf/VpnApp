@@ -6,15 +6,15 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.LinearLayout
-import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
 import com.example.test.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationView
 import com.example.yourapp.LocationActivity
 
 class MainActivity : AppCompatActivity() {
@@ -65,6 +65,17 @@ class MainActivity : AppCompatActivity() {
                     // Open the LocationActivity when "Current Location" is clicked
                     val intent = Intent(this, LocationActivity::class.java)
                     startActivity(intent)
+                    drawerLayout.closeDrawers()
+                    true
+                }
+                R.id.nav_share_with_friends -> {
+                    // Share functionality
+                    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                        type = "text/plain"
+                        putExtra(Intent.EXTRA_SUBJECT, "Check out this app!")
+                        putExtra(Intent.EXTRA_TEXT, "Check out this amazing app: www.google.com")
+                    }
+                    startActivity(Intent.createChooser(shareIntent, "Share via"))
                     drawerLayout.closeDrawers()
                     true
                 }
