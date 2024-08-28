@@ -5,8 +5,14 @@
         <!-- Customize text color -->
         <item name="android:textColor">#FF0000</item> <!-- Example color: Red -->
         <!-- Customize text size -->
-
         <item name="android:textSize">18sp</item>
         <!-- You can add more attributes here as needed -->
+    </style>
+
+    <!-- Custom RatingBar Theme -->
+    <style name="RatingBarTheme" parent="@android:style/Widget.RatingBar">
+        <item name="colorControlNormal">#FFFFFF</item> <!-- Unselected star color (White) -->
+        <item name="colorControlActivated">#FFDF00</item> <!-- Selected star color (Gold) -->
+        <item name="colorControlHighlight">#FFDF00</item> <!-- Star click/hover color (Gold) -->
     </style>
 </resources>

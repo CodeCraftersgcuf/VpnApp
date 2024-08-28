@@ -46,46 +46,46 @@
             android:title="Share with Friends"
             app:itemTextAppearance="@style/CustomMenuItemStyle"/>
         <item
-            android:id="@+id/nav_help_support"
+            android:id="@+id/rate_us"
             android:icon="@android:drawable/ic_menu_help"
-            android:title="Help and Support"
+            android:title="Rate us"
             app:itemTextAppearance="@style/CustomMenuItemStyle"/>
         <item
-            android:id="@+id/nav_privacy_policy"
+            android:id="@+id/feedback"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="Feedback"
+            app:itemTextAppearance="@style/CustomMenuItemStyle"/>
+        <item
+            android:id="@+id/privacy_policy"
             android:icon="@android:drawable/ic_menu_info_details"
             android:title="Privacy Policy"
             app:itemTextAppearance="@style/CustomMenuItemStyle"/>
-        <item
-            android:id="@+id/nav_terms_conditions"
-            android:icon="@android:drawable/ic_menu_info_details"
-            android:title="Terms and Conditions"
-            app:itemTextAppearance="@style/CustomMenuItemStyle"/>
 
-        <!-- Additional Items -->
-        <item
-            android:id="@+id/nav_account"
-            android:icon="@android:drawable/ic_menu_agenda"
-            android:title="Account"
-            app:itemTextAppearance="@style/CustomMenuItemStyle"/>
-        <item
-            android:id="@+id/nav_security"
-            android:icon="@android:drawable/ic_menu_agenda"
-            android:title="Security"
-            app:itemTextAppearance="@style/CustomMenuItemStyle"/>
-        <item
-            android:id="@+id/nav_notifications"
-            android:icon="@android:drawable/ic_menu_info_details"
-            android:title="Notifications"
-            app:itemTextAppearance="@style/CustomMenuItemStyle"/>
-        <item
-            android:id="@+id/nav_about"
-            android:icon="@android:drawable/ic_menu_info_details"
-            android:title="About"
-            app:itemTextAppearance="@style/CustomMenuItemStyle"/>
-        <item
-            android:id="@+id/nav_logout"
-            android:icon="@android:drawable/ic_menu_close_clear_cancel"
-            android:title="Logout"
-            app:itemTextAppearance="@style/CustomMenuItemStyle"/>
+<!--        &lt;!&ndash; Additional Items &ndash;&gt;-->
+<!--        <item-->
+<!--            android:id="@+id/nav_account"-->
+<!--            android:icon="@android:drawable/ic_menu_agenda"-->
+<!--            android:title="Account"-->
+<!--            app:itemTextAppearance="@style/CustomMenuItemStyle"/>-->
+<!--        <item-->
+<!--            android:id="@+id/nav_security"-->
+<!--            android:icon="@android:drawable/ic_menu_agenda"-->
+<!--            android:title="Security"-->
+<!--            app:itemTextAppearance="@style/CustomMenuItemStyle"/>-->
+<!--        <item-->
+<!--            android:id="@+id/nav_notifications"-->
+<!--            android:icon="@android:drawable/ic_menu_info_details"-->
+<!--            android:title="Notifications"-->
+<!--            app:itemTextAppearance="@style/CustomMenuItemStyle"/>-->
+<!--        <item-->
+<!--            android:id="@+id/nav_about"-->
+<!--            android:icon="@android:drawable/ic_menu_info_details"-->
+<!--            android:title="About"-->
+<!--            app:itemTextAppearance="@style/CustomMenuItemStyle"/>-->
+<!--        <item-->
+<!--            android:id="@+id/nav_logout"-->
+<!--            android:icon="@android:drawable/ic_menu_close_clear_cancel"-->
+<!--            android:title="Logout"-->
+<!--            app:itemTextAppearance="@style/CustomMenuItemStyle"/>-->
     </group>
 </menu>

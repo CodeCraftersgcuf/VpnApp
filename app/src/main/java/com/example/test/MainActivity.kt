@@ -1,9 +1,9 @@
 package com.example.test
 
+import RateUsDialogFragment
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
+import android.util.Log
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -15,12 +15,18 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.test.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
+import com.example.test.PremiumFeaturesActivity
+import com.example.test.SpeedTestActivity
+import com.example.test.Country
 import com.example.yourapp.LocationActivity
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+
+    // Add a tag for logging
+    private val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +38,9 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        val goProButton: ImageView = findViewById(R.id.goPro)
-        goProButton.setOnClickListener {
+        // Handling goProButton click
+        val goProButton: ImageView? = findViewById(R.id.goPro)
+        goProButton?.setOnClickListener {
             val intent = Intent(this, PremiumFeaturesActivity::class.java)
             startActivity(intent)
         }
@@ -43,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
 
         // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        // menu should be considered as top-level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
@@ -59,6 +66,7 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, SpeedTestActivity::class.java)
                     startActivity(intent)
                     drawerLayout.closeDrawers()
+                    Log.d(TAG, "Speed Test clicked")
                     true
                 }
                 R.id.nav_current_location -> {
@@ -66,6 +74,7 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, LocationActivity::class.java)
                     startActivity(intent)
                     drawerLayout.closeDrawers()
+                    Log.d(TAG, "Current Location clicked")
                     true
                 }
                 R.id.nav_share_with_friends -> {
@@ -77,6 +86,15 @@ class MainActivity : AppCompatActivity() {
                     }
                     startActivity(Intent.createChooser(shareIntent, "Share via"))
                     drawerLayout.closeDrawers()
+                    Log.d(TAG, "Share with friends clicked")
+                    true
+                }
+                R.id.rate_us -> {
+                    Log.d(TAG, "Rate Us clicked")
+                    // Show the Rate Us dialog
+                    val rateUsDialog = RateUsDialogFragment()
+                    rateUsDialog.show(supportFragmentManager, "RateUsDialog")
+                    drawerLayout.closeDrawers() // Close the drawer
                     true
                 }
                 else -> false
@@ -89,23 +107,14 @@ class MainActivity : AppCompatActivity() {
             // Navigate to CountryActivity
             val intent = Intent(this@MainActivity, Country::class.java)
             startActivity(intent)
+            Log.d(TAG, "Country Selector clicked")
         }
-    }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_settings -> {
-                val intent = Intent(this, SettingsActivity::class.java)
-                startActivity(intent)
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+        // Handling closeButton click inside the drawer
+        val closeButton: ImageView = navView.getHeaderView(0).findViewById(R.id.closeButton)
+        closeButton.setOnClickListener {
+            drawerLayout.closeDrawers()  // Close the navigation drawer
+            Log.d(TAG, "Close Button clicked")
         }
     }
 

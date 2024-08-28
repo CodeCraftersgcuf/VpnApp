@@ -1,40 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/nav_header_height"
-    android:background="@drawable/side_nav_bar"
-    android:gravity="bottom"
-    android:orientation="vertical"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    android:padding="16dp"
+    android:orientation="vertical">
 
+    <!-- Close Button aligned to the top right -->
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/close"
+        android:contentDescription="Close" />
+
+    <!-- Logo centered horizontally -->
     <ImageView
         android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo_icon"
+        android:contentDescription="@string/nav_header_desc" />
+
+    <!-- Title below the logo, centered horizontally -->
+    <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/nav_header_desc"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:layout_marginLeft="75dp"
-        app:srcCompat="@drawable/logo_icon" />
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Private VPN"
+        android:textColor="#FF9800"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-
-
-    <TextView
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="75dp"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nav_header_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
+    <!-- Subtitle below the title, centered horizontally -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="45dp"
-        android:text="@string/nav_header_subtitle" />
-</LinearLayout>
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="Unlimited access to all"
+        android:textColor="#B6B1B1"
+        android:textSize="14sp" />
+
+</RelativeLayout>
