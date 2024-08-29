@@ -22,51 +22,47 @@
         <activity
             android:name=".SplashActivity"
             android:exported="true"
-        android:theme="@style/Theme.Test.NoActionBar">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+            android:theme="@style/Theme.Test.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-    <activity
-        android:name=".RatingDialog"
-        android:exported="false" />
-    <!-- Add your Google Maps API key here -->
-    <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyA52Bt_VkZ83JfA_lrrxZNDOTFBV2Go5IE" />
+        <activity
+            android:name=".RatingDialog"
+            android:exported="false" />
+        <!-- Add your Google Maps API key here -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA52Bt_VkZ83JfA_lrrxZNDOTFBV2Go5IE" />
 
-    <activity
-        android:name="com.example.yourapp.LocationActivity"
-        android:exported="false"
-        android:label="Current Location" />
-    <activity
-        android:name=".SpeedTestActivity"
-        android:exported="false"
-        android:label="Speed Test Net" />
-    <activity
-        android:name=".PremiumFeaturesActivity"
-        android:exported="false"
-        android:label="Premium" />
-    <activity
-        android:name=".SettingsActivity"
-        android:exported="false"
-        android:label="Settings" />
-    <activity
-        android:name=".Country"
-        android:exported="false" />
+        <activity
+            android:name="com.example.yourapp.LocationActivity"
+            android:exported="false"
+            android:label="Current Location" />
+        <activity
+            android:name=".SpeedTestActivity"
+            android:exported="false"
+            android:label="Speed Test Net" />
+        <activity
+            android:name=".PremiumFeaturesActivity"
+            android:exported="false"
+            android:label="Premium" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="Settings" />
+        <activity
+            android:name=".Country"
+            android:exported="false" />
 
-    <activity
-        android:name=".MainActivity"
-        android:exported="true"
-        android:label="@string/setting"
-        android:theme="@style/Theme.Test.NoActionBar">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-</application>
-
-    </manifest>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/setting"
+            android:theme="@style/Theme.Test.NoActionBar">
+            <!-- Remove the LAUNCHER intent filter here -->
+        </activity>
+    </application>
+</manifest>
