@@ -25,8 +25,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Repeat this block for each country -->
+            <!-- First country with dropdown -->
             <LinearLayout
+                android:id="@+id/first_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -52,16 +53,131 @@
                     android:textSize="16sp" />
 
                 <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/signal" />
+
+                <ImageView
                     android:id="@+id/dropdownIcon1"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/dropdown" />
+            </LinearLayout>
+
+            <!-- Dropdown layout for the first country, initially hidden -->
+            <LinearLayout
+                android:id="@+id/dropdown_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="40dp"
+                android:paddingTop="8dp">
+
+                <!-- First City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Zurich"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon1"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Second City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Zurich"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon2"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Third City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Altstetten"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon3"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
             </LinearLayout>
 
             <!-- Repeat similar blocks for other countries -->
 
             <LinearLayout
+                android:id="@+id/second_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -87,14 +203,131 @@
                     android:textSize="16sp" />
 
                 <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/signal" />
+                <ImageView
                     android:id="@+id/dropdownIcon2"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/dropdown" />
             </LinearLayout>
 
+            <!-- Dropdown layout for the second country, initially hidden -->
             <LinearLayout
+                android:id="@+id/dropdown_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="40dp"
+                android:paddingTop="8dp">
+
+                <!-- First City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Paris"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon4"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Second City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lyon"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon5"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Third City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Marseille"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon6"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Repeat this block for other countries -->
+            <!-- Example for United Kingdom -->
+
+            <LinearLayout
+                android:id="@+id/third_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -118,16 +351,132 @@
                     android:text="United Kingdom"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
-
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/signal" />
                 <ImageView
                     android:id="@+id/dropdownIcon3"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/dropdown" />
             </LinearLayout>
-
+            <!-- Dropdown layout for the third country, initially hidden -->
             <LinearLayout
+                android:id="@+id/dropdown_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="40dp"
+                android:paddingTop="8dp">
+
+                <!-- First City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="London"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon7"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Second City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Manchester"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon8"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Third City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Birmingham"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon9"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <!-- Repeat this pattern for all other countries -->
+            <LinearLayout
+                android:id="@+id/fourth_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -153,14 +502,129 @@
                     android:textSize="16sp" />
 
                 <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/signal" />
+                <ImageView
                     android:id="@+id/dropdownIcon4"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/dropdown" />
             </LinearLayout>
 
+            <!-- Dropdown layout for the fourth country, initially hidden -->
             <LinearLayout
+                android:id="@+id/dropdown_layout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="40dp"
+                android:paddingTop="8dp">
+
+                <!-- First City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Toronto"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon10"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Second City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Vancouver"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon11"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Third City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Montreal"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon12"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/fifth_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -186,14 +650,127 @@
                     android:textSize="16sp" />
 
                 <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/signal" />
+                <ImageView
                     android:id="@+id/dropdownIcon5"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/dropdown" />
             </LinearLayout>
+            <!-- Dropdown layout for the fifth country, initially hidden -->
+            <LinearLayout
+                android:id="@+id/dropdown_layout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="40dp"
+                android:paddingTop="8dp">
+
+                <!-- First City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Berlin"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon13"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Second City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Munich"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon14"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Third City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Frankfurt"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon15"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+            </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/sixth_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -219,16 +796,129 @@
                     android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/dropdownIcon7"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/signal" />
+                <ImageView
+                    android:id="@+id/dropdownIcon6"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/dropdown" />
             </LinearLayout>
+            <!-- Dropdown layout for the sixth country, initially hidden -->
+            <LinearLayout
+                android:id="@+id/dropdown_layout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="40dp"
+                android:paddingTop="8dp">
 
-            <!-- Repeated blocks for other countries -->
+                <!-- First City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Zurich"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon16"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Second City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName17"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Geneva"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon17"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Third City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName18"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Basel"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon18"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Continue this pattern for each additional country -->
 
             <LinearLayout
+                android:id="@+id/seventh_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -254,14 +944,129 @@
                     android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/dropdownIcon121"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/signal" />
+                <ImageView
+                    android:id="@+id/dropdownIcon7"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/dropdown" />
             </LinearLayout>
 
+            <!-- Dropdown layout for the Netherlands, initially hidden -->
             <LinearLayout
+                android:id="@+id/dropdown_layout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="40dp"
+                android:paddingTop="8dp">
+
+                <!-- First City - Amsterdam -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName19"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Amsterdam"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon19"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Second City - Rotterdam -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName20"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Rotterdam"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon20"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Third City - The Hague -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName21"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="The Hague"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon21"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/eighth_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -287,14 +1092,128 @@
                     android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/dropdownIcon123"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/signal" />
+                <ImageView
+                    android:id="@+id/dropdownIcon8"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/dropdown" />
             </LinearLayout>
-
+            <!-- Dropdown layout for the eighth country, initially hidden -->
             <LinearLayout
+                android:id="@+id/dropdown_layout8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="40dp"
+                android:paddingTop="8dp">
+
+                <!-- First City - Stockholm -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName22"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Stockholm"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon22"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Second City - Gothenburg -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName23"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Gothenburg"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon23"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Third City - Malmö -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName24"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Malmö"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon24"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- Continue this pattern for each additional country -->
+            <LinearLayout
+                android:id="@+id/ninth_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -304,13 +1223,13 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:id="@+id/flagIcon124"
+                    android:id="@+id/flagIcon9"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/norway" />
 
                 <TextView
-                    android:id="@+id/countryName124"
+                    android:id="@+id/countryName9"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -320,14 +1239,127 @@
                     android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/dropdownIcon124"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/signal" />
+                <ImageView
+                    android:id="@+id/dropdownIcon9"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/dropdown" />
             </LinearLayout>
 
+            <!-- Dropdown layout for Norway, initially hidden -->
             <LinearLayout
+                android:id="@+id/dropdown_layout9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="40dp"
+                android:paddingTop="8dp">
+
+                <!-- First City - Oslo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName911"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Oslo"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree912"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon913"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Second City - Bergen -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName202"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Bergen"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree2012"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon204"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Third City - Trondheim -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName215"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Trondheim"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree20121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon2123"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tenth_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -337,13 +1369,13 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:id="@+id/flagIcon122"
+                    android:id="@+id/flagIcon10"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/australia" />
 
                 <TextView
-                    android:id="@+id/countryName122"
+                    android:id="@+id/countryName10"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -353,14 +1385,127 @@
                     android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/dropdownIcon122"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/signal" />
+                <ImageView
+                    android:id="@+id/dropdownIcon10"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/dropdown" />
             </LinearLayout>
 
+            <!-- Dropdown layout for Australia, initially hidden -->
             <LinearLayout
+                android:id="@+id/dropdown_layout10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="40dp"
+                android:paddingTop="8dp">
+
+                <!-- First City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName2212"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sydney"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree2212"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon2212"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Second City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName2321"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Melbourne"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree2321"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon2321"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Third City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName224"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Brisbane"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree224"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon224"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eleven_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -370,13 +1515,13 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:id="@+id/flagIcon1242"
+                    android:id="@+id/flagIcon11"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/japan" />
 
                 <TextView
-                    android:id="@+id/countryName1242"
+                    android:id="@+id/countryName11"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -386,14 +1531,127 @@
                     android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/dropdownIcon1242"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/signal" />
+                <ImageView
+                    android:id="@+id/dropdownIcon11"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/dropdown" />
             </LinearLayout>
 
+            <!-- Dropdown layout for Japan, initially hidden -->
             <LinearLayout
+                android:id="@+id/dropdown_layout11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="40dp"
+                android:paddingTop="8dp">
+
+                <!-- First City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName265"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tokyo"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree265"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon265"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Second City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName262"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Osaka"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree262"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon262"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Third City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName271"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kyoto"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree271"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon271"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/twelth_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -403,13 +1661,13 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:id="@+id/flagIcon125"
+                    android:id="@+id/flagIcon12"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/singapore" />
 
                 <TextView
-                    android:id="@+id/countryName125"
+                    android:id="@+id/countryName12"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -419,12 +1677,125 @@
                     android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/dropdownIcon125"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/signal" />
+                <ImageView
+                    android:id="@+id/dropdownIcon12"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/dropdown" />
             </LinearLayout>
+
+            <!-- Dropdown layout for Singapore, initially hidden -->
+            <LinearLayout
+                android:id="@+id/dropdown_layout12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="40dp"
+                android:paddingTop="8dp">
+
+                <!-- First City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName28"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Singapore"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon28"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Second City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName29"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sentosa"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon29"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Third City -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/cityName30"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jurong"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cityFree30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/signalIcon30"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/signal"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
 
         </LinearLayout>
     </ScrollView>
