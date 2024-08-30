@@ -60,5 +60,6 @@ dependencies {
     implementation("com.google.android.gms:play-services-location:21.0.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
     implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.25")
+    implementation ("com.google.android.material:material:1.8.0")
 
 }

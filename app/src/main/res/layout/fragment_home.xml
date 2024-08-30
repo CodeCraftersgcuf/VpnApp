@@ -28,19 +28,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <!-- Connect Button -->
+
     <LinearLayout
         android:id="@+id/countrySelector"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/rounded_corners"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="10dp"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/rounded_corners"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:gravity="center_vertical">
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/flagIcon"
@@ -52,11 +54,11 @@
             android:id="@+id/countryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Germany "
-            android:textColor="#FFFFFF"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="100dp"
-            android:textSize="16sp"/>
+            android:text="Germany "
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
         <ImageView
             android:id="@+id/dropdownIcon"
@@ -65,12 +67,11 @@
             android:src="@drawable/dropdown" />
     </LinearLayout>
 
-    <!-- Connect Button -->
     <Button
         android:id="@+id/connectButton"
         style="@style/CustomButtonStyle"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:drawableTop="@drawable/ic_power"
         android:drawablePadding="8dp"
         android:gravity="center"
@@ -81,7 +82,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/countrySelector"
-        app:layout_constraintVertical_bias="0.206"
+        app:layout_constraintVertical_bias="0.282"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView

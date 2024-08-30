@@ -35,14 +35,14 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
 
-        // Fetch and display the IP address location
-        fetchIpAddressLocation()
-
         // Handle back button click
         val backButton: ImageView = findViewById(R.id.backButton)
         backButton.setOnClickListener {
             finish() // Go back to the previous activity
         }
+
+        // Fetch and display the IP address location
+        fetchIpAddressLocation()
     }
 
     private fun fetchIpAddressLocation() {
@@ -74,12 +74,7 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
                 Log.d("PARSE_JSON", "Parsed IP: $ip, Timezone: $timezone, City: $city, Country: $countryCode, Lat: $lat, Lon: $lon")
 
                 withContext(Dispatchers.Main) {
-                    if (lat != 0.0 && lon != 0.0) {
-                        Log.d("UPDATE_UI_CALL", "Calling updateUI with lat: $lat, lon: $lon")
-                        updateUI(ip, timezone, city, countryCode, lat, lon)
-                    } else {
-                        Log.e("LOCATION_ERROR", "Invalid latitude or longitude values.")
-                    }
+                    updateUIWithIpInfo(ip, timezone, city, countryCode, lat, lon)
                 }
             } catch (e: Exception) {
                 Log.e("FETCH_ERROR", "Error fetching IP address location: ${e.message}")
@@ -88,25 +83,22 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-    private fun updateUI(ip: String, timezone: String, city: String, countryCode: String, lat: Double, lon: Double) {
+    private fun updateUIWithIpInfo(ip: String, timezone: String, city: String, countryCode: String, lat: Double, lon: Double) {
         try {
-            Log.d("UPDATE_UI", "Updating UI with IP: $ip, Timezone: $timezone, Location: $city, $countryCode")
-
             findViewById<TextView>(R.id.ip_address).text = "IP Address: $ip"
             findViewById<TextView>(R.id.time_zone).text = "Timezone: $timezone"
             findViewById<TextView>(R.id.location_name).text = "$city, $countryCode"
 
             if (isMapReady && googleMap != null) {
-                Log.d("MAP_READY_CHECK", "GoogleMap is ready. Updating map with marker.")
                 val location = LatLng(lat, lon)
                 googleMap!!.addMarker(MarkerOptions().position(location).title("$city, $countryCode"))
-                googleMap!!.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 12f))
+                googleMap!!.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15f))
                 Log.d("MAP_UPDATE", "Map updated with marker at: $lat, $lon")
             } else {
                 Log.e("MAP_ERROR", "GoogleMap is not ready yet or is null.")
             }
         } catch (e: Exception) {
-            Log.e("UPDATE_UI_ERROR", "Error updating UI: ${e.message}")
+            Log.e("UPDATE_UI_ERROR", "Error updating UI with IP info: ${e.message}")
             e.printStackTrace()
         }
     }
@@ -114,7 +106,6 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(map: GoogleMap) {
         googleMap = map
         isMapReady = true
-        Log.d("MAP_READY", "GoogleMap is ready.")
     }
 
     override fun onResume() {

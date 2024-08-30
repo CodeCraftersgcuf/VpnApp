@@ -15,9 +15,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.test.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
-import com.example.test.PremiumFeaturesActivity
-import com.example.test.SpeedTestActivity
-import com.example.test.Country
+import com.google.android.material.tabs.TabLayout
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayoutMediator
 import com.example.yourapp.LocationActivity
 
 class MainActivity : AppCompatActivity() {
@@ -31,20 +31,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        supportActionBar?.title = "New Text"
-
+        // Set up View Binding
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Set up the action bar with custom title
+        supportActionBar?.title = "New Text"
         setSupportActionBar(binding.appBarMain.toolbar)
-
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top-level destinations.
+        // Set up the navigation configuration with top-level destinations
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
@@ -103,8 +102,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Adding the countrySelector click event
-        val countrySelector: LinearLayout = findViewById(R.id.countrySelector)
-        countrySelector.setOnClickListener {
+        val countrySelector: LinearLayout? = findViewById(R.id.countrySelector)
+        countrySelector?.setOnClickListener {
             // Navigate to CountryActivity
             val intent = Intent(this@MainActivity, Country::class.java)
             startActivity(intent)
@@ -112,11 +111,35 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Handling closeButton click inside the drawer
-        val closeButton: ImageView = navView.getHeaderView(0).findViewById(R.id.closeButton)
-        closeButton.setOnClickListener {
+        val closeButton: ImageView? = navView.getHeaderView(0).findViewById(R.id.closeButton)
+        closeButton?.setOnClickListener {
             drawerLayout.closeDrawers()  // Close the navigation drawer
             Log.d(TAG, "Close Button clicked")
         }
+
+        // Set up ViewPager and TabLayout
+        val viewPager: ViewPager2? = findViewById(R.id.viewpager)
+        val tabLayout: TabLayout? = findViewById(R.id.tablayout)
+
+        // Ensure views are not null before proceeding
+        if (viewPager == null || tabLayout == null) {
+            Log.e(TAG, "ViewPager or TabLayout is null, please check your layout file.")
+            return
+        }
+
+        // Create an instance of VPAdapter and set it to the ViewPager
+        val adapter = VPAdapter(this)
+        viewPager.adapter = adapter
+
+        // Attach the TabLayout with the ViewPager
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = when (position) {
+                0 -> "All"
+                1 -> "Streaming"
+                2 -> "Gaming"
+                else -> null
+            }
+        }.attach()
     }
 
     override fun onSupportNavigateUp(): Boolean {

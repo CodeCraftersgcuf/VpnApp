@@ -137,6 +137,7 @@ class SpeedTestActivity : AppCompatActivity() {
                     downloadSpeeds.add(downloadSpeedMbps)
                     runOnUiThread {
                         downloadRate.text = String.format("Download Rate: %.2f Mbps", downloadSpeedMbps)
+                        speedText.text = String.format("Downloading: %.2f Mbps", downloadSpeedMbps) // Real-time update
                     }
                     Log.i("SpeedTestActivity", "Download $index completed in $downloadTime ms at speed: ${downloadSpeedMbps}Mbps")
                     return@repeat
@@ -171,6 +172,7 @@ class SpeedTestActivity : AppCompatActivity() {
                     uploadSpeeds.add(uploadSpeedMbps)
                     runOnUiThread {
                         uploadRate.text = String.format("Upload Rate: %.2f Mbps", uploadSpeedMbps)
+                        speedText.text = String.format("Uploading: %.2f Mbps", uploadSpeedMbps) // Real-time update
                     }
                     Log.i("SpeedTestActivity", "Upload $index completed in $uploadTime ms at speed: ${uploadSpeedMbps}Mbps")
                     return@repeat
@@ -182,17 +184,6 @@ class SpeedTestActivity : AppCompatActivity() {
                 Log.e("SpeedTestActivity", "Failed to upload $index after 3 attempts")
             }
         }
-    }
-
-    private fun animateSpeedText(targetSpeed: Double) {
-        val animator = ObjectAnimator.ofFloat(0f, targetSpeed.toFloat())
-        animator.duration = 1000 // Animation duration of 1 second
-        animator.addUpdateListener { animation ->
-            val animatedValue = animation.animatedValue as Float
-            speedText.text = String.format("%.2f", animatedValue)
-        }
-        animator.interpolator = DecelerateInterpolator() // Smooth deceleration animation
-        animator.start()
     }
 
     private fun fetchIPAddress() {
