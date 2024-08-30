@@ -38,12 +38,6 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        // Handling goProButton click
-        val goProButton: ImageView? = findViewById(R.id.goPro)
-        goProButton?.setOnClickListener {
-            val intent = Intent(this, PremiumFeaturesActivity::class.java)
-            startActivity(intent)
-        }
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -87,6 +81,13 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent.createChooser(shareIntent, "Share via"))
                     drawerLayout.closeDrawers()
                     Log.d(TAG, "Share with friends clicked")
+                    true
+                }
+                R.id.nav_upgrade_to_pro -> {
+                    val intent = Intent(this, PremiumFeaturesActivity::class.java)
+                    startActivity(intent)
+                    drawerLayout.closeDrawers() // Close the drawer after launching the activity
+                    Log.d(TAG, "Upgrade to PRO clicked")
                     true
                 }
                 R.id.rate_us -> {

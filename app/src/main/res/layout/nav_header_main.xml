@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#000000"
+    android:background="#1C1B24"
     android:padding="16dp"
     android:orientation="vertical">
 
@@ -19,7 +19,7 @@
 
     <!-- Logo centered horizontally -->
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/goPro"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
@@ -32,11 +32,11 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imageView"
+        android:layout_below="@id/goPro"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:text="Private VPN"
-        android:textColor="#FF9800"
+        android:textColor="#6D4AFF"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -51,5 +51,6 @@
         android:text="Unlimited access to all"
         android:textColor="#B6B1B1"
         android:textSize="14sp" />
+
 
 </RelativeLayout>

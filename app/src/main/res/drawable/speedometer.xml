@@ -4,7 +4,7 @@
     <!-- Outer Ring -->
     <item>
         <shape android:shape="ring">
-            <solid android:color="#0D1321"/>
+            <solid android:color="#1C1B24"/>
             <size android:width="300dp" android:height="300dp"/>
         </shape>
     </item>
@@ -19,8 +19,8 @@
             <shape android:shape="ring">
                 <size android:width="280dp" android:height="280dp"/>
                 <gradient
-                    android:startColor="#22CCC2"
-                    android:endColor="#23A29B"
+                    android:startColor="#1C1B24"
+                    android:endColor="#1C1B24"
                     android:angle="0"/>
             </shape>
         </rotate>

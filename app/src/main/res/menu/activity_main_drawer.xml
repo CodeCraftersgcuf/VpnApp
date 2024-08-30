@@ -5,6 +5,18 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
+        <!-- Custom "Upgrade to PRO" Item -->
+        <item
+            android:id="@+id/nav_upgrade_to_pro"
+            android:title=""
+            android:enabled="true"
+            android:checkable="false"
+            app:actionLayout="@layout/custom_upgrade_to_pro_layout"
+            android:icon="@null" />
+
+
+
         <!-- Subscription Settings -->
         <item
             android:id="@+id/nav_restore_purchases"
@@ -13,14 +25,15 @@
             app:itemTextAppearance="@style/CustomMenuItemStyle"/>
         <item
             android:id="@+id/nav_manage_subscriptions"
-            android:icon="@android:drawable/ic_menu_manage"
+            android:icon="@drawable/sub"
             android:title="Manage Subscriptions"
             app:itemTextAppearance="@style/CustomMenuItemStyle"/>
+
 
         <!-- Apps Settings -->
         <item
             android:id="@+id/nav_speed_test"
-            android:icon="@android:drawable/ic_menu_camera"
+            android:icon="@drawable/fast"
             android:title="Speed Test"
             app:itemTextAppearance="@style/CustomMenuItemStyle"/>
         <item
@@ -30,9 +43,11 @@
             app:itemTextAppearance="@style/CustomMenuItemStyle"/>
         <item
             android:id="@+id/nav_split_tunneling"
-            android:icon="@android:drawable/ic_menu_share"
+            android:icon="@drawable/split"
             android:title="Split Tunneling"
             app:itemTextAppearance="@style/CustomMenuItemStyle"/>
+
+
 
         <!-- General Settings -->
         <item
@@ -47,45 +62,18 @@
             app:itemTextAppearance="@style/CustomMenuItemStyle"/>
         <item
             android:id="@+id/rate_us"
-            android:icon="@android:drawable/ic_menu_help"
+            android:icon="@drawable/thumb"
             android:title="Rate us"
             app:itemTextAppearance="@style/CustomMenuItemStyle"/>
         <item
             android:id="@+id/feedback"
-            android:icon="@android:drawable/ic_menu_info_details"
+            android:icon="@drawable/feedback"
             android:title="Feedback"
             app:itemTextAppearance="@style/CustomMenuItemStyle"/>
         <item
             android:id="@+id/privacy_policy"
-            android:icon="@android:drawable/ic_menu_info_details"
+            android:icon="@drawable/policy"
             android:title="Privacy Policy"
             app:itemTextAppearance="@style/CustomMenuItemStyle"/>
-
-<!--        &lt;!&ndash; Additional Items &ndash;&gt;-->
-<!--        <item-->
-<!--            android:id="@+id/nav_account"-->
-<!--            android:icon="@android:drawable/ic_menu_agenda"-->
-<!--            android:title="Account"-->
-<!--            app:itemTextAppearance="@style/CustomMenuItemStyle"/>-->
-<!--        <item-->
-<!--            android:id="@+id/nav_security"-->
-<!--            android:icon="@android:drawable/ic_menu_agenda"-->
-<!--            android:title="Security"-->
-<!--            app:itemTextAppearance="@style/CustomMenuItemStyle"/>-->
-<!--        <item-->
-<!--            android:id="@+id/nav_notifications"-->
-<!--            android:icon="@android:drawable/ic_menu_info_details"-->
-<!--            android:title="Notifications"-->
-<!--            app:itemTextAppearance="@style/CustomMenuItemStyle"/>-->
-<!--        <item-->
-<!--            android:id="@+id/nav_about"-->
-<!--            android:icon="@android:drawable/ic_menu_info_details"-->
-<!--            android:title="About"-->
-<!--            app:itemTextAppearance="@style/CustomMenuItemStyle"/>-->
-<!--        <item-->
-<!--            android:id="@+id/nav_logout"-->
-<!--            android:icon="@android:drawable/ic_menu_close_clear_cancel"-->
-<!--            android:title="Logout"-->
-<!--            app:itemTextAppearance="@style/CustomMenuItemStyle"/>-->
     </group>
 </menu>
