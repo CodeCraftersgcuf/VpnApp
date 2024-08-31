@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1C1B24"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Language"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <!-- Language List -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- English -->
+            <LinearLayout
+                android:id="@+id/language_item_en"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/language_name_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="English"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/language_code_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(en)"
+                    android:textColor="#888888"
+                    android:textSize="14sp"
+                    android:paddingStart="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#6D4AFF"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+            <!-- Spanish -->
+            <LinearLayout
+                android:id="@+id/language_item_es"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/language_name_es"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Spanish"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/language_code_es"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(es)"
+                    android:textColor="#888888"
+                    android:textSize="14sp"
+                    android:paddingStart="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_es"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#6D4AFF"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+            <!-- French -->
+            <LinearLayout
+                android:id="@+id/language_item_fr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/language_name_fr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="French"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/language_code_fr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(fr)"
+                    android:textColor="#888888"
+                    android:textSize="14sp"
+                    android:paddingStart="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_fr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#6D4AFF"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+            <!-- German -->
+            <LinearLayout
+                android:id="@+id/language_item_de"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/language_name_de"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="German"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/language_code_de"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(de)"
+                    android:textColor="#888888"
+                    android:textSize="14sp"
+                    android:paddingStart="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_de"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#6D4AFF"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+            <!-- Dutch -->
+            <LinearLayout
+                android:id="@+id/language_item_nl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/language_name_nl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dutch"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/language_code_nl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(nl)"
+                    android:textColor="#888888"
+                    android:textSize="14sp"
+                    android:paddingStart="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_nl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#6D4AFF"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+            <!-- Italian -->
+            <LinearLayout
+                android:id="@+id/language_item_it"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/language_name_it"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Italian"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/language_code_it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(it)"
+                    android:textColor="#888888"
+                    android:textSize="14sp"
+                    android:paddingStart="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#6D4AFF"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+            <!-- Portuguese -->
+            <LinearLayout
+                android:id="@+id/language_item_pt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/language_name_pt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Portuguese"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/language_code_pt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(pt)"
+                    android:textColor="#888888"
+                    android:textSize="14sp"
+                    android:paddingStart="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_pt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#6D4AFF"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+            <!-- Russian -->
+            <LinearLayout
+                android:id="@+id/language_item_ru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/language_name_ru"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Russian"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/language_code_ru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(ru)"
+                    android:textColor="#888888"
+                    android:textSize="14sp"
+                    android:paddingStart="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_ru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#6D4AFF"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+            <!-- More languages can be added here following the same pattern -->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

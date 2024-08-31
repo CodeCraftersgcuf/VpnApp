@@ -61,5 +61,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
     implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.25")
     implementation ("com.google.android.material:material:1.8.0")
+    implementation ("androidx.appcompat:appcompat:1.3.1")
+    implementation ("androidx.fragment:fragment-ktx:1.3.6")
 
 }

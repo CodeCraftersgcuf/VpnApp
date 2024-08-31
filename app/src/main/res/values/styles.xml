@@ -8,6 +8,10 @@
         <item name="android:textSize">18sp</item>
         <!-- You can add more attributes here as needed -->
     </style>
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">#1C1B24</item>
+        <item name="android:textColor">#FFFF</item>
+    </style>
 
     <!-- Custom RatingBar Theme -->
     <style name="RatingBarTheme" parent="@android:style/Widget.RatingBar">

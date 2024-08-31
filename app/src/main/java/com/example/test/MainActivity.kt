@@ -4,6 +4,7 @@ import RateUsDialogFragment
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -89,6 +90,13 @@ class MainActivity : AppCompatActivity() {
                     Log.d(TAG, "Upgrade to PRO clicked")
                     true
                 }
+                R.id.nav_select_language -> {
+                    // Show the Select Language dialog
+                    val dialog = SelectLanguageDialogFragment()
+                    dialog.show(supportFragmentManager, "SelectLanguageDialog")
+                    drawerLayout.closeDrawers() // Close the drawer
+                    true
+                }
                 R.id.rate_us -> {
                     Log.d(TAG, "Rate Us clicked")
                     // Show the Rate Us dialog
@@ -146,4 +154,15 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.nav_select_language -> {
+                val dialog = SelectLanguageDialogFragment()
+                dialog.show(supportFragmentManager, "SelectLanguageDialog")
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 }
