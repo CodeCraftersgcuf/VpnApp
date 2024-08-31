@@ -9,14 +9,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_back_arrow"
-        android:contentDescription="Back Button"
+        android:contentDescription="@string/back_button"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp" />
     <TextView
         android:id="@+id/ip_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="IP Address: "
+        android:text="@string/ip_address"
         android:textSize="18sp"
         android:textColor="@android:color/white"
         android:layout_marginTop="16dp"

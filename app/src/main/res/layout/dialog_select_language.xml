@@ -11,7 +11,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Language"
+        android:text="@string/select_language"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:layout_gravity="center_horizontal"

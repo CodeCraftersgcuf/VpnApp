@@ -17,14 +17,14 @@
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="Back Button"/>
+        android:contentDescription="@string/back_button"/>
 
     <!-- Title -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test internet speed"
+        android:text="@string/test_internet_speed"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -39,7 +39,7 @@
         android:id="@+id/pingValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ping -- ms"
+        android:text="@string/ping_ms"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:layout_marginTop="32dp"
@@ -79,7 +79,7 @@
         android:id="@+id/downloadSpeed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Download 0.00 Mbps"
+        android:text="@string/download_0_00_mbps"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@id/speedometerBackground"
@@ -91,7 +91,7 @@
         android:id="@+id/ipAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="IP Address --"
+        android:text="@string/ip_address"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:layout_marginTop="16dp"
@@ -127,7 +127,7 @@
                 android:id="@+id/downloadRate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Download Rate --"
+                android:text="@string/download_rate"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:layout_marginTop="4dp" />
@@ -151,7 +151,7 @@
                 android:id="@+id/uploadSpeed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Upload Rate --"
+                android:text="@string/upload_rate"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:layout_marginTop="4dp" />
@@ -160,7 +160,7 @@
                 android:id="@+id/uploadRate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Upload Rate --"
+                android:text="@string/upload_rate"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:layout_marginTop="4dp" />
@@ -172,7 +172,7 @@
         android:id="@+id/startSpeedTestButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start speed test"
+        android:text="@string/start_speed_test"
         android:textColor="#FFFFFF"
         android:backgroundTint="#6D4AFF"
         android:textStyle="bold"

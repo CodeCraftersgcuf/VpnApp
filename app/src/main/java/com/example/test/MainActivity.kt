@@ -4,7 +4,6 @@ import RateUsDialogFragment
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -19,9 +18,14 @@ import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
+import android.content.Context
+import android.content.res.Configuration
+import android.os.Build
+import java.util.Locale
+import android.content.SharedPreferences
 import com.example.yourapp.LocationActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), SelectLanguageDialogFragment.LanguageSelectionListener {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -31,6 +35,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Load the selected language
+        loadSelectedLanguage(this)
 
         // Set up View Binding
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -93,7 +100,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_select_language -> {
                     // Show the Select Language dialog
                     val dialog = SelectLanguageDialogFragment()
-                    dialog.show(supportFragmentManager, "SelectLanguageDialog")
+                    if (!dialog.isAdded) {  // Prevent showing the dialog twice
+                        dialog.show(supportFragmentManager, "SelectLanguageDialog")
+                    }
                     drawerLayout.closeDrawers() // Close the drawer
                     true
                 }
@@ -154,15 +163,40 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.nav_select_language -> {
-                val dialog = SelectLanguageDialogFragment()
-                dialog.show(supportFragmentManager, "SelectLanguageDialog")
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+
+    // This method is called when a language is selected in the dialog
+    override fun onLanguageSelected(languageCode: String) {
+        updateLanguage(this, languageCode)
+        saveSelectedLanguage(this, languageCode)
+        recreate()  // Recreate activity to apply language change
+    }
+
+    fun updateLanguage(context: Context, languageCode: String) {
+        val locale = Locale(languageCode)
+        Locale.setDefault(locale)
+
+        val config = Configuration()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            config.setLocale(locale)
+            context.createConfigurationContext(config)
+        } else {
+            config.locale = locale
+        }
+
+        context.resources.updateConfiguration(config, context.resources.displayMetrics)
+    }
+
+    fun saveSelectedLanguage(context: Context, languageCode: String) {
+        val sharedPreferences: SharedPreferences = context.getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+        with(sharedPreferences.edit()) {
+            putString("selected_language", languageCode)
+            apply()
         }
     }
 
+    fun loadSelectedLanguage(context: Context) {
+        val sharedPreferences: SharedPreferences = context.getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+        val languageCode = sharedPreferences.getString("selected_language", "en")
+        updateLanguage(context, languageCode ?: "en")
+    }
 }

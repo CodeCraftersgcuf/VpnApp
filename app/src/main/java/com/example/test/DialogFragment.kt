@@ -1,30 +1,42 @@
 package com.example.test
 
 import android.app.Dialog
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
-import android.widget.RadioGroup
 import androidx.fragment.app.DialogFragment
 
 class SelectLanguageDialogFragment : DialogFragment() {
 
-    private lateinit var radioGroup: RadioGroup
+    interface LanguageSelectionListener {
+        fun onLanguageSelected(languageCode: String)
+    }
+
+    private var listener: LanguageSelectionListener? = null
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        listener = context as? LanguageSelectionListener
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        listener = null
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.dialog_select_language, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Directly handle the checked state of RadioButtons without adding them to a RadioGroup
         val radioButtonEn: RadioButton = view.findViewById(R.id.radio_button_en)
         val radioButtonEs: RadioButton = view.findViewById(R.id.radio_button_es)
         val radioButtonFr: RadioButton = view.findViewById(R.id.radio_button_fr)
@@ -34,7 +46,6 @@ class SelectLanguageDialogFragment : DialogFragment() {
         val radioButtonPt: RadioButton = view.findViewById(R.id.radio_button_pt)
         val radioButtonRu: RadioButton = view.findViewById(R.id.radio_button_ru)
 
-        // Handle RadioButton clicks
         val radioButtons = listOf(
             radioButtonEn, radioButtonEs, radioButtonFr, radioButtonDe,
             radioButtonNl, radioButtonIt, radioButtonPt, radioButtonRu
@@ -47,7 +58,6 @@ class SelectLanguageDialogFragment : DialogFragment() {
                 // Check the selected RadioButton
                 radioButton.isChecked = true
 
-                // You can add logic here to handle language selection based on the selected RadioButton
                 val selectedLanguageCode = when (radioButton.id) {
                     R.id.radio_button_en -> "en"
                     R.id.radio_button_es -> "es"
@@ -60,11 +70,11 @@ class SelectLanguageDialogFragment : DialogFragment() {
                     else -> "en"
                 }
 
-                // Dismiss the dialog after selection (optional)
-                dismiss()
+                // Notify the listener (MainActivity) about the selected language
+                listener?.onLanguageSelected(selectedLanguageCode)
 
-                // Implement your logic for changing the app's language based on selectedLanguageCode
-                // Example: updateLanguage(selectedLanguageCode)
+                // Dismiss the dialog
+                dismiss()
             }
         }
 

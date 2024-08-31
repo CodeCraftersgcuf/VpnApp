@@ -26,7 +26,7 @@
             android:id="@+id/upgrade_to_pro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Upgrade to PRO!"
+            android:text="@string/upgrade_to_pro"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -35,7 +35,7 @@
             android:id="@+id/pro_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remove Ads and unlock all location"
+            android:text="@string/remove_ads_and_unlock_all_location"
             android:textColor="@android:color/darker_gray"
             android:textSize="14sp" />
     </LinearLayout>

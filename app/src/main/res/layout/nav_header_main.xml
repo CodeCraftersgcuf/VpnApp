@@ -15,7 +15,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/close"
-        android:contentDescription="Close" />
+        android:contentDescription="@string/close" />
 
     <!-- Logo centered horizontally -->
     <ImageView
@@ -35,7 +35,7 @@
         android:layout_below="@id/goPro"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
-        android:text="Private VPN"
+        android:text="@string/private_vpn"
         android:textColor="#6D4AFF"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -48,7 +48,7 @@
         android:layout_below="@id/title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"
-        android:text="Unlimited access to all"
+        android:text="@string/unlimited_access_to_all"
         android:textColor="#B6B1B1"
         android:textSize="14sp" />
 

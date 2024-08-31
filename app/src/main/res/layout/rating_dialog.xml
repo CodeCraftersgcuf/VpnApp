@@ -8,7 +8,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Love VPN App?"
+        android:text="@string/love_vpn_app"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true" />
@@ -17,7 +17,7 @@
         android:id="@+id/tvMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="We appreciate your feedback."
+        android:text="@string/we_appreciate_your_feedback"
         android:textSize="14sp"
         android:layout_below="@id/tvTitle"
         android:layout_marginTop="8dp"
@@ -46,13 +46,13 @@
             android:id="@+id/btnCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancel" />
+            android:text="@string/cancel" />
 
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit"
+            android:text="@string/submit"
             android:layout_marginStart="16dp" />
     </LinearLayout>
 

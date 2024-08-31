@@ -15,7 +15,7 @@
         android:layout_height="24dp"
         android:layout_margin="16dp"
         android:src="@drawable/close"
-        android:contentDescription="Close"
+        android:contentDescription="@string/close"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,7 +35,7 @@
         android:id="@+id/premiumFeaturesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Premium features"
+        android:text="@string/premium_features"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -78,7 +78,7 @@
                 android:id="@+id/anonymousTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Anonymous"
+                android:text="@string/anonymous"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:layout_marginStart="10dp"
@@ -88,7 +88,7 @@
                 android:id="@+id/anonymousDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hide your IP with anonymous surfing"
+                android:text="@string/hide_your_ip_with_anonymous_surfing"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp"
                 android:layout_marginStart="20dp"
@@ -121,7 +121,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
-                    android:text="Fast"
+                    android:text="@string/fast"
                     android:textColor="#FFFFFF"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -129,7 +129,7 @@
                 android:id="@+id/fastDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Up to 1000 Mb/s bandwidth \nto explore"
+                android:text="@string/up_to_1000_mb_s_bandwidth_nto_explore"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp"
                 android:layout_marginStart="20dp"
@@ -170,7 +170,7 @@
                 android:id="@+id/removeAdsTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Remove Ads"
+                android:text="@string/remove_ads"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:layout_marginStart="10dp"
@@ -180,7 +180,7 @@
                 android:id="@+id/removeAdsDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enjoy the app without annoying ads"
+                android:text="@string/enjoy_the_app_without_annoying_ads"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp"
                 android:layout_marginStart="20dp"
@@ -209,7 +209,7 @@
                 android:id="@+id/secureTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Secure"
+                android:text="@string/secure"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:layout_marginStart="10dp"
@@ -220,7 +220,7 @@
                 android:id="@+id/secureDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Transfer traffic via encrypted tunnel"
+                android:text="@string/transfer_traffic_via_encrypted_tunnel"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp"
                 android:layout_marginStart="20dp"
@@ -264,7 +264,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="1 MONTH"
+                android:text="@string/_1_month"
                 android:textColor="#FFFFFF"
                 android:textSize="19sp" />
 
@@ -272,7 +272,7 @@
                 android:id="@+id/oneMonthPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="9.99 $/Month"
+                android:text="@string/_9_99_month"
                 android:textColor="#FFFFFF"
                 android:textSize="19sp" />
         </LinearLayout>
@@ -291,7 +291,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="1 YEAR"
+                android:text="@string/_1_year"
                 android:textColor="#FFFFFF"
                 android:textSize="19sp" />
 
@@ -299,7 +299,7 @@
                 android:id="@+id/oneYearPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4.99 $/Month"
+                android:text="@string/_4_99_month"
                 android:textColor="#FFFFFF"
                 android:textSize="19sp" />
         </LinearLayout>
@@ -322,7 +322,7 @@
             android:id="@+id/sixMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TRY PREMIUM FREE"
+            android:text="@string/try_premium_free"
             android:textColor="#FFFFFF"
             android:textSize="19sp" />
 
@@ -334,7 +334,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
         android:gravity="center"
-        android:text="7-Day Free Trial. Then 9.99 $/Month"
+        android:text="@string/_7_day_free_trial_then_9_99_month"
         android:textColor="#FFFFFF"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"

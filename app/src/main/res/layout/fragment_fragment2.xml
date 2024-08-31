@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="United States"
+                    android:text="@string/united_states"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -88,7 +88,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Zurich"
+                        android:text="@string/zurich"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -96,7 +96,7 @@
                         android:id="@+id/cityFree1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -120,7 +120,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Zurich"
+                        android:text="@string/zurich"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -128,7 +128,7 @@
                         android:id="@+id/cityFree2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -152,7 +152,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Altstetten"
+                        android:text="@string/altstetten"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -160,7 +160,7 @@
                         android:id="@+id/cityFree3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -198,7 +198,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="France"
+                    android:text="@string/france"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -237,7 +237,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Paris"
+                        android:text="@string/paris"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -245,7 +245,7 @@
                         android:id="@+id/cityFree4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -269,7 +269,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Lyon"
+                        android:text="@string/lyon"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -277,7 +277,7 @@
                         android:id="@+id/cityFree5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -301,7 +301,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Marseille"
+                        android:text="@string/marseille"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -309,7 +309,7 @@
                         android:id="@+id/cityFree6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -348,7 +348,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="United Kingdom"
+                    android:text="@string/united_kingdom"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
                 <ImageView
@@ -385,7 +385,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="London"
+                        android:text="@string/london"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -393,7 +393,7 @@
                         android:id="@+id/cityFree7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -417,7 +417,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Manchester"
+                        android:text="@string/manchester"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -425,7 +425,7 @@
                         android:id="@+id/cityFree8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -449,7 +449,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Birmingham"
+                        android:text="@string/birmingham"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -457,7 +457,7 @@
                         android:id="@+id/cityFree9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -497,7 +497,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Canada"
+                    android:text="@string/canada"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -536,7 +536,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Toronto"
+                        android:text="@string/toronto"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -544,7 +544,7 @@
                         android:id="@+id/cityFree10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -568,7 +568,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Vancouver"
+                        android:text="@string/vancouver"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -576,7 +576,7 @@
                         android:id="@+id/cityFree11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -600,7 +600,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Montreal"
+                        android:text="@string/montreal"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -608,7 +608,7 @@
                         android:id="@+id/cityFree12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -645,7 +645,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Germany"
+                    android:text="@string/germany"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -683,7 +683,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Berlin"
+                        android:text="@string/berlin"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -691,7 +691,7 @@
                         android:id="@+id/cityFree13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -715,7 +715,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Munich"
+                        android:text="@string/munich"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -723,7 +723,7 @@
                         android:id="@+id/cityFree14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -747,7 +747,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Frankfurt"
+                        android:text="@string/frankfurt"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -755,7 +755,7 @@
                         android:id="@+id/cityFree15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -791,7 +791,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Switzerland"
+                    android:text="@string/switzerland"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -829,7 +829,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Zurich"
+                        android:text="@string/zurich"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -837,7 +837,7 @@
                         android:id="@+id/cityFree16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -861,7 +861,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Geneva"
+                        android:text="@string/geneva"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -869,7 +869,7 @@
                         android:id="@+id/cityFree17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -893,7 +893,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Basel"
+                        android:text="@string/basel"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -901,7 +901,7 @@
                         android:id="@+id/cityFree18"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -939,7 +939,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Netherlands"
+                    android:text="@string/netherlands"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -978,7 +978,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Amsterdam"
+                        android:text="@string/amsterdam"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -986,7 +986,7 @@
                         android:id="@+id/cityFree19"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1010,7 +1010,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Rotterdam"
+                        android:text="@string/rotterdam"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1018,7 +1018,7 @@
                         android:id="@+id/cityFree20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1042,7 +1042,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="The Hague"
+                        android:text="@string/the_hague"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1050,7 +1050,7 @@
                         android:id="@+id/cityFree21"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1087,7 +1087,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Sweden"
+                    android:text="@string/sweden"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -1125,7 +1125,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Stockholm"
+                        android:text="@string/stockholm"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1133,7 +1133,7 @@
                         android:id="@+id/cityFree22"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1157,7 +1157,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Gothenburg"
+                        android:text="@string/gothenburg"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1165,7 +1165,7 @@
                         android:id="@+id/cityFree23"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1189,7 +1189,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Malmö"
+                        android:text="@string/malm"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1197,7 +1197,7 @@
                         android:id="@+id/cityFree24"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1234,7 +1234,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Norway"
+                    android:text="@string/norway"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -1273,7 +1273,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Oslo"
+                        android:text="@string/oslo"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1281,7 +1281,7 @@
                         android:id="@+id/cityFree912"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1305,7 +1305,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Bergen"
+                        android:text="@string/bergen"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1313,7 +1313,7 @@
                         android:id="@+id/cityFree2012"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1337,7 +1337,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Trondheim"
+                        android:text="@string/trondheim"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1345,7 +1345,7 @@
                         android:id="@+id/cityFree20121"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1380,7 +1380,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Australia"
+                    android:text="@string/australia"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -1419,7 +1419,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Sydney"
+                        android:text="@string/sydney"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1427,7 +1427,7 @@
                         android:id="@+id/cityFree2212"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1451,7 +1451,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Melbourne"
+                        android:text="@string/melbourne"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1459,7 +1459,7 @@
                         android:id="@+id/cityFree2321"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1483,7 +1483,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Brisbane"
+                        android:text="@string/brisbane"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1491,7 +1491,7 @@
                         android:id="@+id/cityFree224"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1526,7 +1526,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Japan"
+                    android:text="@string/japan"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -1565,7 +1565,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Tokyo"
+                        android:text="@string/tokyo"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1573,7 +1573,7 @@
                         android:id="@+id/cityFree265"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1597,7 +1597,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Osaka"
+                        android:text="@string/osaka"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1605,7 +1605,7 @@
                         android:id="@+id/cityFree262"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1629,7 +1629,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Kyoto"
+                        android:text="@string/kyoto"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1637,7 +1637,7 @@
                         android:id="@+id/cityFree271"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1672,7 +1672,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Singapore"
+                    android:text="@string/singapore"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -1711,7 +1711,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Singapore"
+                        android:text="@string/singapore"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1719,7 +1719,7 @@
                         android:id="@+id/cityFree28"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1743,7 +1743,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Sentosa"
+                        android:text="@string/sentosa"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1751,7 +1751,7 @@
                         android:id="@+id/cityFree29"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
@@ -1775,7 +1775,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Jurong"
+                        android:text="@string/jurong"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -1783,7 +1783,7 @@
                         android:id="@+id/cityFree30"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Free"
+                        android:text="@string/free"
                         android:textColor="#888888"
                         android:textSize="12sp" />
 
