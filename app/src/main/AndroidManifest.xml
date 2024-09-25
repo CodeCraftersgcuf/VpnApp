@@ -2,88 +2,66 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/logo_icon"
+        android:icon="@mipmap/ic_launcher_adaptive_fore"
         android:label="@string/app_name"
-        android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@drawable/logo_icon"
+        android:roundIcon="@mipmap/ic_launcher_adaptive_fore"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Test"
+        android:theme="@style/Theme.PrivateVpn"
         tools:targetApi="31">
-
-        <!-- Splash Activity -->
-        <activity
-            android:name=".SplashActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Test.NoActionBar"
-            android:screenOrientation="portrait"> <!-- Lock orientation to landscape -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- Rating Dialog Activity -->
-        <activity
-            android:name=".RatingDialog"
-            android:exported="false"
-            android:screenOrientation="portrait" /> <!-- Lock orientation to landscape -->
-
         <!-- Google Maps API key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyA52Bt_VkZ83JfA_lrrxZNDOTFBV2Go5IE" />
 
-        <!-- Location Activity -->
         <activity
-            android:name="com.example.yourapp.LocationActivity"
-            android:exported="false"
-            android:label="Current Location"
-            android:screenOrientation="portrait" /> <!-- Lock orientation to landscape -->
-
-        <!-- Speed Test Activity -->
+            android:name=".FeedBackActivity"
+            android:exported="false" />
         <activity
             android:name=".SpeedTestActivity"
-            android:exported="false"
-            android:label="Speed Test Net"
-            android:screenOrientation="portrait" /> <!-- Lock orientation to landscape -->
-
-        <!-- Premium Features Activity -->
+            android:exported="false" />
         <activity
-            android:name=".PremiumFeaturesActivity"
-            android:exported="false"
-            android:label="Premium"
-            android:screenOrientation="portrait" /> <!-- Lock orientation to landscape -->
-
-        <!-- Settings Activity -->
+            android:name=".checkLocationActivity"
+            android:exported="false" />
         <activity
-            android:name=".SettingsActivity"
-            android:exported="false"
-            android:label="Settings"
-            android:screenOrientation="portrait" /> <!-- Lock orientation to landscape -->
-
-        <!-- Country Activity -->
+            android:name=".CheckActivity"
+            android:exported="false" />
         <activity
-            android:name=".Country"
-            android:exported="false"
-            android:screenOrientation="portrait" /> <!-- Lock orientation to landscape -->
+            android:name=".DisconnectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConnectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <!-- Main Activity -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".sidenavigationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".subciActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AllServersActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/setting"
-            android:theme="@style/Theme.Test.NoActionBar"
-            android:screenOrientation="portrait"> <!-- Lock orientation to landscape -->
-            <!-- Remove the LAUNCHER intent filter here -->
-        </activity>
+            android:exported="true" />
     </application>
+
 </manifest>

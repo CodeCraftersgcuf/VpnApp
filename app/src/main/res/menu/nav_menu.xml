@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="nav_view">
+
+    <item android:title="Subscription Settings"/>
+
+    <item android:id="@+id/Restore"
+        android:title="Restore punchases"
+        android:icon="@drawable/premium"/>
+
+    <item android:id="@+id/Manage"
+        android:title="Manage Subscription"
+        android:icon="@drawable/premium"/>
+
+    <item android:title="Apps settings"/>
+
+
+
+    <item android:id="@+id/Speed_test"
+        android:title="Speed test"
+        android:icon="@drawable/premium"/>
+
+    <item android:id="@+id/Current"
+        android:title="Current location"
+        android:icon="@drawable/premium"/>
+
+    <item android:id="@+id/Split"
+        android:title="Split tuneling"
+        android:icon="@drawable/premium"/>
+
+
+    <item android:title="General settings"/>
+
+    <item android:id="@+id/Select_language"
+        android:title="Select language"
+        android:icon="@drawable/premium"/>
+
+    <item android:id="@+id/Share"
+        android:title="Share With friends"
+        android:icon="@drawable/premium"/>
+
+    <item android:id="@+id/Rate_us"
+        android:title="Rate us"
+        android:icon="@drawable/premium"/>
+
+    <item android:id="@+id/Feedback"
+        android:title="Feedback"
+        android:icon="@drawable/premium"/>
+
+</menu>

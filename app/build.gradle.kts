@@ -1,15 +1,17 @@
+import java.util.regex.Pattern.compile
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 
 android {
-    namespace = "com.example.test"
+    namespace = "com.example.privatevpn"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.test"
-        minSdk = 28
+        applicationId = "com.example.privatevpn"
+        minSdk = 21
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -24,7 +26,6 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            isDebuggable = true
         }
     }
     compileOptions {
@@ -34,34 +35,28 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.29")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.squareup.okhttp3:okhttp:4.9.3")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
-    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
-    implementation ("com.google.android.material:material:1.8.0")
+
+    // MapView and location services
     implementation("com.google.android.gms:play-services-maps:18.1.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.25")
-    implementation ("com.google.android.material:material:1.8.0")
-    implementation ("androidx.appcompat:appcompat:1.3.1")
-    implementation ("androidx.fragment:fragment-ktx:1.3.6")
+
+    // Network libraries
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
 
 }

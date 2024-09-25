@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#6D4AFF</color>
-    <color name="purple_500">#6D4AFF</color>
-    <color name="purple_700">#6D4AFF</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="navbar">#292733</color>
+    <color name="body">#1C1B24</color>
+    <color name="buttonicon">#6D4AFF</color>
+
+    <color name="cornercolor">#B5C0D0</color>
+
+    <color name="button">#FABC3F</color>
+    <color name="transparent"></color>
+    <color name="green">#008000</color>
+    <color name="lightblue">#3498db</color>
+    <color name="bottomsheetcolor">#201E43</color>
+
+
+    <color name="background_color">#80363668</color>
+
+
 </resources>
