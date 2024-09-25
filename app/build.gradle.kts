@@ -38,8 +38,16 @@ android {
 }
 
 dependencies {
-    implementation("de.hdodenhof:circleimageview:3.1.0")
-    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.29")
+//    rounded image
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+//        rounded image end
+//
+//    gif file
+
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.29")
+
+//    blur view
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -49,14 +57,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    // MapView and location services
+//    mapview
     implementation("com.google.android.gms:play-services-maps:18.1.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
 
-    // Network libraries
-    implementation("com.squareup.okhttp3:okhttp:4.9.0")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
-    implementation ("com.google.android.material:material:1.6.1")
+
 }

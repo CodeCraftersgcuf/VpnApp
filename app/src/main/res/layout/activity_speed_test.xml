@@ -9,7 +9,6 @@
     tools:context=".SpeedTestActivity"
     android:background="@drawable/bg">
 
-
     <ImageView
         android:id="@+id/back_home"
         android:layout_width="30dp"
@@ -38,14 +37,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.00999999" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        android:indeterminate="true"
-        tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -62,20 +53,18 @@
 
 
     <TextView
-        android:id="@+id/ipAddressTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="--"
         android:textColor="@color/white"
-    android:textSize="20sp"
-    android:textStyle="bold"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.498"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.622" />
-
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.622" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -118,7 +107,6 @@
                 app:layout_constraintHorizontal_bias="0.046"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.4"
                 app:tint="@color/green" />
 
             <TextView
@@ -150,19 +138,18 @@
                 app:layout_constraintVertical_bias="0.132" />
 
             <TextView
-                android:id="@+id/uploadRateTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="--"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.14"
+                app:layout_constraintHorizontal_bias="0.164"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.692" />
+                app:layout_constraintVertical_bias="0.66999996" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -170,14 +157,14 @@
                 android:layout_height="wrap_content"
                 android:text="--"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.897"
+                app:layout_constraintHorizontal_bias="0.653"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.692" />
+                app:layout_constraintVertical_bias="0.674" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
