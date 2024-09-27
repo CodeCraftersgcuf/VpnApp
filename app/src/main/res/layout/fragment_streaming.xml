@@ -39,7 +39,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
                     android:textStyle="bold"
-                    android:text="United States"
+                    android:text="@string/united_states"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="France"
+                    android:text="@string/france"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -107,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="United Kindom"
+                    android:text="@string/united_kindom"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -141,7 +141,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Canada"
+                    android:text="@string/canada"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -175,7 +175,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Germany"
+                    android:text="@string/germany"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -210,7 +210,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Switzerland"
+                    android:text="@string/switzerland"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -246,7 +246,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Netherlands"
+                    android:text="@string/netherlands"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -281,7 +281,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Australia"
+                    android:text="@string/australia"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -315,7 +315,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Sweden"
+                    android:text="@string/sweden"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -349,7 +349,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Norway"
+                    android:text="@string/norway"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -383,7 +383,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Japan"
+                    android:text="@string/japan"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -417,7 +417,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:text="Singapore"
+                    android:text="@string/singapore"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 

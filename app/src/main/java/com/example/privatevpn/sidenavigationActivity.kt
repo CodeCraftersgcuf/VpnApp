@@ -48,7 +48,7 @@ class sidenavigationActivity : AppCompatActivity() {
         speedtext.setOnClickListener{
             intent = Intent(this,SpeedTestActivity::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+//            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
         }
 
         share.setOnClickListener{
@@ -65,7 +65,7 @@ class sidenavigationActivity : AppCompatActivity() {
         closes.setOnClickListener{
             intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+//            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
 
         }
 
@@ -73,20 +73,20 @@ class sidenavigationActivity : AppCompatActivity() {
         loactions.setOnClickListener{
             intent = Intent(this,checkLocationActivity::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
+//            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
         }
 //        speed test activity
         linearLayout2.setOnClickListener{
             intent = Intent(this,subciActivity::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
+//            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
 
         }
 
         feedback.setOnClickListener{
             intent = Intent(this,FeedBackActivity::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+//            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
         }
     }
 }

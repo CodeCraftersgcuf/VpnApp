@@ -9,6 +9,7 @@
     tools:context=".SpeedTestActivity"
     android:background="@drawable/bg">
 
+
     <ImageView
         android:id="@+id/back_home"
         android:layout_width="30dp"
@@ -26,7 +27,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test internet speed"
+        android:text="@string/test_internet_speed"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -37,11 +38,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.00999999" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminate="true"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="IP Address"
+        android:text="@string/ip_address"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,18 +62,20 @@
 
 
     <TextView
+        android:id="@+id/ipAddressTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="--"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622" />
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.498"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.622" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -107,12 +118,13 @@
                 app:layout_constraintHorizontal_bias="0.046"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.4"
                 app:tint="@color/green" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Upload Rate"
+                android:text="@string/upload_rate"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -126,7 +138,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Download Rate"
+                android:text="@string/download_rate"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -138,18 +150,19 @@
                 app:layout_constraintVertical_bias="0.132" />
 
             <TextView
+                android:id="@+id/uploadRateTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="--"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="10dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.164"
+                app:layout_constraintHorizontal_bias="0.14"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.66999996" />
+                app:layout_constraintVertical_bias="0.692" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -157,14 +170,14 @@
                 android:layout_height="wrap_content"
                 android:text="--"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="10dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.653"
+                app:layout_constraintHorizontal_bias="0.897"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.674" />
+                app:layout_constraintVertical_bias="0.692" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -178,7 +191,7 @@
         android:layout_marginEnd="10dp"
         android:backgroundTint="@color/buttonicon"
         android:padding="13dp"
-        android:text="Start Speed test"
+        android:text="@string/start_speed_test"
         android:textColor="@color/white"
         android:textSize="22dp"
         app:layout_constraintBottom_toBottomOf="parent"

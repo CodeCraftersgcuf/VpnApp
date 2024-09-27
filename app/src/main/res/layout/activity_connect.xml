@@ -51,7 +51,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GO VPN"
+        android:text="@string/go_vpn"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -109,7 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/button"
-            android:text="+ 60 Minutes"
+            android:text="@string/_60_minutes"
             android:layout_marginEnd="10dp"
             android:textColor="@color/white"
             android:textSize="16dp"
@@ -119,7 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/green"
-            android:text="+ Extra Time"
+            android:text="@string/extra_time"
             android:layout_marginStart="10dp"
             android:textColor="@color/white"
             android:textSize="16dp"/>
@@ -173,7 +173,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Upload Rate"
+                android:text="@string/upload_rate"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -187,7 +187,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Download Rate"
+                android:text="@string/download_rate"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -238,7 +238,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/buttonicon"
         android:padding="13dp"
-        android:text="Disonnect"
+        android:text="@string/disonnect"
         android:textColor="@color/white"
         android:textSize="22dp"
         app:layout_constraintBottom_toBottomOf="parent"

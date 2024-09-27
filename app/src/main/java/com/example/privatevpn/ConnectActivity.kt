@@ -30,25 +30,25 @@ class ConnectActivity : AppCompatActivity() {
         profile_image.setOnClickListener{
             intent = Intent(this,AllServersActivity::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
+//            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
         }
 
         priemums.setOnClickListener{
             intent = Intent(this,subciActivity::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
+//            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
         }
 
         toggles.setOnClickListener{
             intent = Intent(this,sidenavigationActivity::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
+//            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
         }
 
         disconnect.setOnClickListener{
             intent = Intent(this,DisconnectActivity::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+//            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
         }
 
     }

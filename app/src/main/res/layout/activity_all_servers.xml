@@ -40,7 +40,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="All Servers"
+        android:text="@string/all_servers"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -71,17 +71,20 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="All" />
+            app:tabTextColor="@color/white"
+            android:text="@string/all" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Streaming" />
+            app:tabTextColor="@color/white"
+            android:text="@string/streaming" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gaming" />
+            app:tabTextColor="@color/white"
+            android:text="@string/gaming" />
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager

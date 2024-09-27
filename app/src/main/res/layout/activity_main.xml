@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="100dp"
-            android:text="Germany "
+            android:text="@string/germany"
             android:textColor="@color/white"
             android:textSize="16sp" />
 
@@ -109,7 +109,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tap to connect"
+        android:text="@string/tap_to_connect"
         android:textColor="@color/white"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
