@@ -40,8 +40,9 @@ class checkLocationActivity : AppCompatActivity(), OnMapReadyCallback {
         mapView.getMapAsync(this)
 
         backhome.setOnClickListener {
-            val intent = Intent(this, sidenavigationActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, sidenavigationActivity::class.java)
+//            startActivity(intent)
+            finish();
 //            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 

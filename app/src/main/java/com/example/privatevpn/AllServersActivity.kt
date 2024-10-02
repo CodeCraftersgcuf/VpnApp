@@ -1,6 +1,5 @@
 package com.example.privatevpn
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -17,9 +16,7 @@ class AllServersActivity : AppCompatActivity() {
         // Set up the back button behavior
         backs = findViewById(R.id.backs)
         backs.setOnClickListener {
-            intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            finish()  // This will go back to the previous activity in the back stack
         }
 
         // Initialize TabLayout and ViewPager
@@ -39,8 +36,7 @@ class AllServersActivity : AppCompatActivity() {
         // Set hardcoded text colors for unselected and selected tabs (both white)
         tabLayout.setTabTextColors(
             0xFFFFFFFF.toInt(),   // Unselected tab text color (white)
-            0xFFFFBF00.toInt()  // This represents a yellow color
-
+            0xFFFFBF00.toInt()    // Selected tab text color (yellow)
         )
     }
 }

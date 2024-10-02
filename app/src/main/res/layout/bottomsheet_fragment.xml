@@ -41,7 +41,7 @@
 
                     <TextView
                         android:id="@+id/textEnglish"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="English (en)"
                         android:textColor="@color/white"
@@ -90,7 +90,7 @@
 
                     <TextView
                         android:id="@+id/textAfrikaans"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Afrikaans (af)"
                         android:textColor="@color/white"
@@ -139,7 +139,7 @@
 
                     <TextView
                         android:id="@+id/textArabic"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Arabic (ar)"
                         android:textColor="@color/white"
@@ -188,7 +188,7 @@
 
                     <TextView
                         android:id="@+id/textChinese"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Chinese (zh)"
                         android:textColor="@color/white"
@@ -237,7 +237,7 @@
 
                     <TextView
                         android:id="@+id/textCzech"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Czech (cs)"
                         android:textColor="@color/white"
@@ -286,7 +286,7 @@
 
                     <TextView
                         android:id="@+id/textDanish"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Danish (da)"
                         android:textColor="@color/white"
@@ -335,7 +335,7 @@
 
                     <TextView
                         android:id="@+id/textDutch"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Dutch (nl)"
                         android:textColor="@color/white"
@@ -384,7 +384,7 @@
 
                     <TextView
                         android:id="@+id/textFrench"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="French (fr)"
                         android:textColor="@color/white"
@@ -431,7 +431,7 @@
 
                     <TextView
                         android:id="@+id/textGerman"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Derman (de)"
                         android:textColor="@color/white"
@@ -480,7 +480,7 @@
 
                     <TextView
                         android:id="@+id/textGreek"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Greek (el)"
                         android:textColor="@color/white"
@@ -527,7 +527,7 @@
 
                     <TextView
                         android:id="@+id/textHindi"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Hindi (hi)"
                         android:textColor="@color/white"
@@ -574,7 +574,7 @@
 
                     <TextView
                         android:id="@+id/textIndonesian"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Indunesian (in)"
                         android:textColor="@color/white"
@@ -621,7 +621,7 @@
 
                     <TextView
                         android:id="@+id/textItalian"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Itailan (it)"
                         android:textColor="@color/white"
@@ -670,7 +670,7 @@
 
                     <TextView
                         android:id="@+id/textJapanese"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Japanese (ja)"
                         android:textColor="@color/white"
@@ -719,7 +719,7 @@
 
                     <TextView
                         android:id="@+id/textMalay"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Malay (ms)"
                         android:textColor="@color/white"
@@ -766,7 +766,7 @@
 
                     <TextView
                         android:id="@+id/textKorean"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Korean (ko)"
                         android:textColor="@color/white"
@@ -815,7 +815,7 @@
 
                     <TextView
                         android:id="@+id/textNorwegian"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Norwegian (no)"
                         android:textColor="@color/white"
@@ -862,7 +862,7 @@
 
                     <TextView
                         android:id="@+id/textPersian"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Persian (fa)"
                         android:textColor="@color/white"
@@ -909,7 +909,7 @@
 
                     <TextView
                         android:id="@+id/textPortuguese"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Portuguese (pt)"
                         android:textColor="@color/white"
@@ -958,7 +958,7 @@
 
                     <TextView
                         android:id="@+id/textRussian"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Russian (ru)"
                         android:textColor="@color/white"
@@ -1005,7 +1005,7 @@
 
                     <TextView
                         android:id="@+id/textSpanish"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Spanish (es)"
                         android:textColor="@color/white"
@@ -1052,7 +1052,7 @@
 
                     <TextView
                         android:id="@+id/textThai"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Thai (th)"
                         android:textColor="@color/white"
@@ -1099,7 +1099,7 @@
 
                     <TextView
                         android:id="@+id/textTurkish"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Turkish (tr)"
                         android:textColor="@color/white"
@@ -1146,7 +1146,7 @@
 
                     <TextView
                         android:id="@+id/textVietnamese"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Vietnamese (vi)"
                         android:textColor="@color/white"

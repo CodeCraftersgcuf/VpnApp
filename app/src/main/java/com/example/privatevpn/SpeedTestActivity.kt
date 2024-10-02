@@ -43,7 +43,7 @@ class SpeedTestActivity : AppCompatActivity() {
 
         // Back button to finish the activity
         backhomes.setOnClickListener {
-            startActivity(Intent(this, sidenavigationActivity::class.java))
+            finish();
         }
 
         // Start speed test on button click

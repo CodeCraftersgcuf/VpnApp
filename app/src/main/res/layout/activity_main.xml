@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.036" />
 
     <ImageView
-        android:id="@+id/priemum"
+        android:id="@+id/premium"
         android:layout_width="30dp"
         android:layout_height="25dp"
         android:src="@drawable/premium"
@@ -89,21 +89,20 @@
             android:src="@drawable/down"
             app:tint="@color/white" />
     </LinearLayout>
-
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/button"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:background="@drawable/rounded_button"
-        android:padding="60dp"
-        android:src="@drawable/power"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517"
-        app:tint="@color/white" />
+        android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:padding="60dp"
+    app:lottie_rawRes="@raw/start_btn"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.497"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.517"
+    app:tint="@color/white" />
+
 
     <TextView
         android:id="@+id/textView"

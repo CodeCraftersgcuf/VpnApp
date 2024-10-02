@@ -19,9 +19,10 @@ class FeedBackActivity : AppCompatActivity() {
         back = findViewById(R.id.backs)
 
         back.setOnClickListener{
-            intent = Intent(this,sidenavigationActivity::class.java)
-            startActivity(intent)
+//            intent = Intent(this,sidenavigationActivity::class.java)
+//            startActivity(intent)
 
+            finish();
 //            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
         }
 
